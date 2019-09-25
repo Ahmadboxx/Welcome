@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>My Example</title>
+<title>My Example</title>
 
 <script>
 // Wait for DOM to load
