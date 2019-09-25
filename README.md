@@ -2,12 +2,51 @@
 <head>
 	<title>My Example</title>
 
-
-<time id="msg"></time>
-
 <script>
-  document.getElementById("msg").innerHTML = new Date().toLocaleString();
+// Wait for DOM to load
+document.addEventListener("DOMContentLoaded", function(event) {
+
+  // Put the button into a variable
+  var e = document.getElementById("myForm");
+  
+  // Wait for user to click the button
+  e.addEventListener( "change", function() {
+  
+    // Put the selected value into a variable
+    var myColor = this.color.value;
+    
+    // The "Switch" statement.
+    switch ( myColor ) {
+    
+    case "Blue":
+      alert("Just like the sky!");
+      break;
+
+    case "Red":
+      alert("Quite daring!");
+      break;
+
+    case "Green":
+      alert("Like... grass?");
+      break;
+      
+    }
+  }, false);
+});
 </script>
+
+<!-- Replace '{action page}' with your own action page to support non-JavaScript users -->
+<form id="myForm" name="myForm" action="{action page}">
+  <label>
+    <input type="radio" name="color" value="Blue"> Blue
+  </label>
+  <label>
+    <input type="radio" name="color" value="Red"> Red
+  </label>
+  <label>
+    <input type="radio" name="color" value="Green"> Green
+  </label>
+</form>
 <body>
   <header>
       <h1>
